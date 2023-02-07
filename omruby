@@ -1,0 +1,30 @@
+Searching 176 files for "omruby"
+
+C:\Sites\omruby\app\views\layouts\application.html.erb:
+    2  <html>
+    3    <head>
+    4:     <title>Omrails</title>
+    5      <meta name="viewport" content="width=device-width,initial-scale=1">
+    6      <%= csrf_meta_tags %>
+
+C:\Sites\omruby\config\application.rb:
+    7  Bundler.require(*Rails.groups)
+    8  
+    9: module Omrails
+   10    class Application < Rails::Application
+   11      # Initialize configuration defaults for originally generated Rails version.
+
+C:\Sites\omruby\config\cable.yml:
+    8    adapter: redis
+    9    url: <%= ENV.fetch("REDIS_URL") { "redis://localhost:6379/1" } %>
+   10:   channel_prefix: omrails_production
+   11  
+
+C:\Sites\omruby\config\environments\production.rb:
+   61    # Use a real queuing backend for Active Job (and separate queues per environment).
+   62    # config.active_job.queue_adapter     = :resque
+   63:   # config.active_job.queue_name_prefix = "omrails_production"
+   64  
+   65    config.action_mailer.perform_caching = false
+
+4 matches across 4 files
